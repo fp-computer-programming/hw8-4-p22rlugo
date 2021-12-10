@@ -16,7 +16,6 @@ def rock_paper_scissors(wins=0,losses=0,ties=0,matches=0): #We set the vars = 0 
                 ties += 1
             elif player == 0:
                 if computer == 1:
-                    print("You lose, paper covers rock.\n")
                     losses += 1
                 else:
                     print("You win, rock crushes scissors!\n")
@@ -35,7 +34,7 @@ def rock_paper_scissors(wins=0,losses=0,ties=0,matches=0): #We set the vars = 0 
                 else:
                     print("You win, scissors cuts paper!\n")
                     wins += 1
-            elif player >= 3:
+            elif player >= 3 or player <= -1:
                 print("Since you put a number higher than what's given you will start another round!\n")
                 rock_paper_scissors()
         
